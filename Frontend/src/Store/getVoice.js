@@ -9,7 +9,7 @@ const useVoiceStore = create((set) => ({
   setVoice: (language) => set({ language }),
   getAudio: async (language) => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/v1/data?language=${language}`);
+      const response = await axios.get(`https://opc-eleven.onrender.com/api/v1/data?language=${language}`);
       console.log("API response:", response.data);
       set({ voice: response.data.voice });
       const audioUrl = response.data.voice.audioUrl;
