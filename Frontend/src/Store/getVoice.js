@@ -6,7 +6,7 @@ const useVoiceStore = create((set) => ({
   voice:null,
   audioUrl : "https://res.cloudinary.com/dr99qbotj/video/upload/v1757670698/ElevenLabs_Text_to_Speech_audio_ff6u8y.mp3",
   setAudioUrl: (audioUrl) => set({ audioUrl }),
-  setVoice: (language) => set({ language }),
+  setVoice: (voice) => set({ voice }),
   getAudio: async (language) => {
     try {
       const response = await axios.get(`https://opc-backend-7l9i.onrender.com/api/v1/data?language=${language}`);
